@@ -37,7 +37,9 @@
 
             foreach (var student in liststud)
             {
-                Console.WriteLine(student.Jmeno + " --- " + student.Body);
+                // Console.WriteLine(student.Jmeno + " --- " + student.Body);
+                Console.WriteLine(student.Popis);
+                // Console.WriteLine(student.Popis2);
             }
 
         }
@@ -56,6 +58,16 @@
 
         public string? Jmeno { get; set; }
         public int Body { get; set; }
+
+        public string? Popis => Jmeno + "-" + Body;
+
+        public string? Popis2
+        {
+            get
+            {
+                return Jmeno + "-" + Body;
+            }
+        }
     }
 
 }
